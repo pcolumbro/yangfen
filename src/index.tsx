@@ -8,14 +8,23 @@ const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
 );
 
-const domain = process.env.AUTH_CLIENT_DOMAIN || '';
-const clientId = process.env.AUTH_CLIENT_ID || '';
+const domain = process.env.REACT_APP_CLIENT_DOMAIN || '';
+const clientId = process.env.REACT_APP_CLIENT_ID || '';
+
+console.log('domain: ', domain);
+console.log('clientId: ', clientId);
 
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>
-			<Auth0Provider domain={domain} clientId={clientId}>
-				<Route path="/" element={<App />} />
+			<Auth0Provider
+				domain={domain}
+				clientId={clientId}
+				authorizationParams={{
+					redirect_uri: window.location.origin,
+				}}
+			>
+				<App/>
 			</Auth0Provider>
 		</BrowserRouter>
 	</React.StrictMode>
