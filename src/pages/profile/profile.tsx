@@ -1,4 +1,5 @@
 import { useAuth0 } from "@auth0/auth0-react";
+import { Container } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -10,7 +11,7 @@ const Profile = () => {
 	}
 
 	return (
-		<>
+		<Container>
 			<Link to="/">Home</Link>
 			{isAuthenticated && (
 			<div>
@@ -19,7 +20,7 @@ const Profile = () => {
 				<p>{user?.email}</p>
 			</div>
 			)}
-		</>
+		</Container>
 	);
 };
 export default Profile;
