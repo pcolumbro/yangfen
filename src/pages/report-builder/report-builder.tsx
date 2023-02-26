@@ -7,10 +7,10 @@ import RecordBuilder from "../../features/add-record/record-builder";
 export const ReportBuilder = () => {
 	return (
 		<Container>
-			<Stack direction="row" spacing={2}>
-				<LoginButton/>
+			<Stack style={{ marginBottom: "30px" }} direction="row" spacing={2}>
+				<LoginButton />
 				<LogoutButton />
-				<CheckAuthButton/>
+				<CheckAuthButton />
 			</Stack>
 			<RecordBuilder />
 		</Container>

@@ -6,7 +6,6 @@ const CheckAuthButton = () => {
 
 	return (
 		<button
-			style={{ marginBottom: "30px" }}
 			onClick={() => console.log('isAuthenticated: ', isAuthenticated)}
 		>
 			Check Auth
