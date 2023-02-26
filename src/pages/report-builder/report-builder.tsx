@@ -1,4 +1,5 @@
 import { Container, Stack } from "@mui/material";
+import { Link } from "react-router-dom";
 import CheckAuthButton from "../../components/check-auth";
 import LoginButton from "../../components/login-button";
 import LogoutButton from "../../components/logout-button";
@@ -11,8 +12,9 @@ export const ReportBuilder = () => {
 				<LoginButton />
 				<LogoutButton />
 				<CheckAuthButton />
+				<Link to="/profile">Profile</Link>
 			</Stack>
-			<RecordBuilder />
+			{/* <RecordBuilder /> */}
 		</Container>
 	);
 };
