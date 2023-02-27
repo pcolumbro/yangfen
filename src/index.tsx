@@ -1,8 +1,9 @@
 import { Auth0Provider } from '@auth0/auth0-react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, RouterProvider } from 'react-router-dom';
 import App from './App';
+import { router } from './routes/routes';
 
 const root = ReactDOM.createRoot(
 	document.getElementById('root') as HTMLElement
@@ -16,8 +17,8 @@ console.log('clientId: ', clientId);
 
 root.render(
 	<React.StrictMode>
-		<BrowserRouter>
-			<Auth0Provider
+		<RouterProvider router={router} />
+			{/* <Auth0Provider
 				domain={domain}
 				clientId={clientId}
 				authorizationParams={{
@@ -26,6 +27,6 @@ root.render(
 			>
 				<App/>
 			</Auth0Provider>
-		</BrowserRouter>
+		</RouterProvider> */}
 	</React.StrictMode>
 );
