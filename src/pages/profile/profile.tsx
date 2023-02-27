@@ -14,11 +14,11 @@ const Profile = () => {
 		<Container>
 			<Link to="/">Home</Link>
 			{isAuthenticated && (
-			<div>
-				<img src={user?.picture} alt={user?.name} />
-				<h2>{user?.name}</h2>
-				<p>{user?.email}</p>
-			</div>
+				<div>
+					<img src={user?.picture} alt={user?.name} />
+					<h2>{user?.name}</h2>
+					<p>{user?.email}</p>
+				</div>
 			)}
 		</Container>
 	);
